@@ -1,8 +1,9 @@
 FROM php:8.2-fpm
 
 RUN apt-get update && apt-get install -y \
-    git curl zip unzip libonig-dev libxml2-dev libpng-dev libjpeg-dev libfreetype6-dev libzip-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
+    git curl zip unzip libonig-dev libxml2-dev libpng-dev \
+    libjpeg-dev libfreetype6-dev libzip-dev libpq-dev \
+    && docker-php-ext-install pdo pdo_mysql pdo_pgsql mbstring exif pcntl bcmath gd zip
 
 COPY --from=composer:2.5 /usr/bin/composer /usr/bin/composer
 
