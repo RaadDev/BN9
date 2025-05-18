@@ -1,0 +1,345 @@
+/* Portfolio Mobile CSS - Comprehensive mobile styles for portfolio page */
+
+/* ===== Mobile Viewport Settings ===== */
+@media screen and (max-width: 992px) {
+  /* General Portfolio Container */
+  .portfolio-container {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  /* Portfolio Header */
+  .portfolio-header {
+    margin-bottom: 20px;
+  }
+
+  .portfolio-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-header p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* Filter Controls */
+  .portfolio-filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-filter-btn {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* View Toggle */
+  .view-toggle {
+    margin-bottom: 15px;
+  }
+
+  .view-toggle-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Portfolio Grid */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Portfolio Gallery */
+  .portfolio-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Portfolio Item */
+  .portfolio-item {
+    margin-bottom: 15px;
+  }
+
+  .portfolio-item-image {
+    height: 180px;
+  }
+
+  .portfolio-item-content {
+    padding: 12px;
+  }
+
+  .portfolio-item-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .portfolio-item-category {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .portfolio-item-description {
+    font-size: 14px;
+    -webkit-line-clamp: 2;
+  }
+
+  /* Load More Button */
+  .load-more-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+
+/* ===== Small Mobile Devices ===== */
+@media screen and (max-width: 576px) {
+  /* Portfolio Grid - Single column for very small screens */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Portfolio Gallery - Two columns for very small screens */
+  .portfolio-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* Filter Controls - Dropdown for very small screens */
+  .portfolio-filters {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-filters-select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+  }
+
+  .portfolio-filter-btn {
+    display: none;
+  }
+
+  /* View Toggle - Smaller for mobile */
+  .view-toggle {
+    margin-bottom: 15px;
+  }
+
+  .view-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Portfolio Item */
+  .portfolio-item-image {
+    height: 200px;
+  }
+}
+
+/* ===== Lightbox Mobile Styles ===== */
+@media screen and (max-width: 992px) {
+  /* Lightbox Container */
+  .lightbox {
+    padding: 10px;
+  }
+
+  /* Lightbox Content */
+  .lightbox-content {
+    width: 95%;
+    max-width: 95%;
+    max-height: 80vh;
+    padding: 0;
+  }
+
+  /* Lightbox Image */
+  .lightbox-image {
+    max-height: calc(80vh - 60px);
+    object-fit: contain;
+  }
+
+  /* Lightbox Controls */
+  .lightbox-close {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .lightbox-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  /* Lightbox Caption */
+  .lightbox-caption {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Lightbox Thumbnails */
+  .lightbox-thumbnails {
+    height: 60px;
+    padding: 5px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .lightbox-thumbnail {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+  }
+}
+
+/* ===== Touch Support ===== */
+@media (hover: none) {
+  /* Improve tap targets */
+  .portfolio-item-overlay {
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .portfolio-item-actions {
+    opacity: 1;
+  }
+
+  .portfolio-item-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Always show view button on touch devices */
+  .portfolio-item:hover .portfolio-item-overlay,
+  .portfolio-item:hover .portfolio-item-actions,
+  .portfolio-item:hover .portfolio-item-view {
+    opacity: 1;
+  }
+
+  /* Larger tap targets */
+  .lightbox-nav, 
+  .lightbox-close,
+  .portfolio-filter-btn,
+  .view-toggle-btn,
+  .load-more-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* ===== RTL Support for Mobile ===== */
+[dir="rtl"] .portfolio-item-category {
+  right: 12px;
+  left: auto;
+}
+
+[dir="rtl"] .lightbox-prev {
+  right: 10px;
+  left: auto;
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .lightbox-next {
+  left: 10px;
+  right: auto;
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .portfolio-filters-select {
+  background-position: left 10px center;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+
+/* ===== Dark Mode Support ===== */
+@media (prefers-color-scheme: dark) {
+  .portfolio-filters-select {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #fff;
+  }
+}
+
+/* ===== Animation Optimization for Mobile ===== */
+@media screen and (max-width: 768px) {
+  /* Reduce animations for better performance */
+  .portfolio-item-image img,
+  .portfolio-item-overlay,
+  .portfolio-item-actions,
+  .portfolio-item-view,
+  .lightbox-content,
+  .lightbox-image {
+    transition: all 0.2s ease;
+  }
+}
+
+/* ===== Image Loading Optimization ===== */
+.portfolio-item-image img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item-image img.loaded {
+  opacity: 1;
+}
+
+/* Placeholder while image loads */
+.portfolio-item-image {
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.portfolio-item-image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ddd;
+  border-top-color: #999;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Hide placeholder when image is loaded */
+.portfolio-item-image img.loaded + .portfolio-item-image::before {
+  display: none;
+}
+
+/* ===== Swipe Support ===== */
+.lightbox-content {
+  touch-action: pan-y pinch-zoom;
+}
